@@ -10,7 +10,7 @@ describe(`Tests CurrencyInput component`, () => {
     
     it(`Component renders input field with value`, () => {
         const { getByTestId } = render(<CurrencyInput value="1000" onChange={() => {}} />);
-        getByTestId(`currency--input-testid`);
-        expect(getByTestId(`currency--input-testid`)).toHaveAttribute(`value`, `1000`)
+        getByTestId(`currency--input`);
+        expect(getByTestId(`currency--input`)).toHaveAttribute(`value`, `1000`)
     });
 })

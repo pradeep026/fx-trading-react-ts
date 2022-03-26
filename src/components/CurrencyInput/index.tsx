@@ -6,16 +6,11 @@ type Props = React.ComponentPropsWithRef<'input'>;
 
 export const CurrencyInput: React.FC<Props> = React.memo((props) => {
 
-    // const __onValueChange = (event: React.FocusEvent<HTMLInputElement>) => {
-    //     const value = event.target.value;
-    //     console.log(value);
-    // };
-
     return (
         <div className='input__currency-component'>
             <label>Amount</label>
             <input
-                data-testid="currency--input-testid"
+                data-testid="currency--input"
                 type={'type'}
                 value={props.value}
                 onChange={props.onChange}
