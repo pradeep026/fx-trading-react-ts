@@ -1,0 +1,14 @@
+.ticker__component {
+    width: 15rem;
+    height: 12rem;
+    border: 2px solid var(--color-border);
+    & label {
+        font-size: var(--fs-base);
+    }
+    & .spot {
+        font-size: var(--fs-large);
+        vertical-align: middle;
+        text-align: center;
+        line-height: 10rem;
+    }
+}

@@ -1,0 +1,23 @@
+.trade__form {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+
+    .flex__row {
+        margin: 0.75rem 1rem;
+    }
+
+    .btn__trade {
+        margin-top: 0.75rem;
+    }
+
+    .confirmation__message {
+        background-color: var(--color-success);
+        border: 2px solid green;
+        padding: 0.50rem;
+       
+        span {
+            font-size: var(--fs-base);
+        }
+    }
+}
