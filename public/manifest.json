@@ -1,0 +1,9 @@
+{
+  "short_name": "FX Spot",
+  "name": "A simple FX trading application",
+  "icons": [
+
+  ],
+  "start_url": ".",
+  "display": "standalone"
+}
