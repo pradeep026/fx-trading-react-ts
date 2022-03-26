@@ -20,8 +20,10 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "object-curly-spacing": "off",
-        "spaced-comment": "off",
-        "indent": "warning"
+        "object-curly-spacing": "0",
+        "spaced-comment": "0",
+        "react/display-name": "0",
+        "padded-blocks": "0",
+        "indent": "0"
     }
 }
