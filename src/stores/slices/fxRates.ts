@@ -81,9 +81,10 @@ export const fxRatesSlice = createSlice({
             // Reset latest price to null when currency pair selection is empty
             if (!action.payload) {
                 state.fxRates = {};
-                state.confirmationMessage = null;
                 state.priceOfSelectedCurrencyPair = null;
             }
+            // Reset the confirmation message on currency pair value selection
+            state.confirmationMessage = null;
             state.canTrade = canTrade(state.ccyPair, state.buyOrSell, state.amount, state.priceOfSelectedCurrencyPair);
         },
         setLatestFxRates(state, action: PayloadAction<FxRates>) {
@@ -105,7 +106,7 @@ export const fxRatesSlice = createSlice({
         submitTradeRequest(state) {
             const confirmationMessage = `${state.buyOrSell === 'BUY' ? 'Bought' : 'Sold'} ${state.amount} ${
                 state?.investmentCcy?.toUpperCase()} for ${
-                    getCounterRate(state)} ${
+                    getCounterRate(state) * Number(state.amount)} ${
                         getCounterCcy(state)?.toUpperCase()}`;
             state.confirmationMessage = confirmationMessage;
         },
