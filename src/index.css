@@ -1,10 +1,33 @@
 
 :root {
   --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+
+  /* Color variables */
+  --color-text: #353535;
+  --color-success: #91C878;
+  --color-error: #F00000;
+  --color-border: #B4B4B4;
+  --color-dark: #000000;
+  --color-light: #FFFFFF;
+
+  /* Font size variables */
+  --fs-large: 2rem; /* equals to 32px */
+  --fs-base: 1.5rem; /* equals to 16px */
+  --fs-medium: 1rem; /* equals to 14px */
+  --fs-small: 0.75rem; /* equals to 12px */
 }
 
 body {
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: var(--color-text);
+  font-size: var(--fs-base);
 }
+
+/* Reset default styles */
+input, select {
+  outline: none;
+}
+

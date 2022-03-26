@@ -1,10 +1,13 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from '../stores';
+import FxSpot from '../modules/FxSpot';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <h1>FX Trading App</h1>
-    </div>
+    <Provider store={store}>
+      <FxSpot />
+    </Provider>
   );
 };
 

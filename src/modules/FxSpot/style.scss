@@ -1,0 +1,15 @@
+.fx__spot--page {
+
+    .page__title {
+        color: var(--color-dark);
+    }
+
+    .ticker__container {
+        display: flex;
+        padding-top: .75rem;
+        gap: 1.25rem;
+    }
+    .row {
+        margin: 0.75rem 1rem;
+    }
+}
