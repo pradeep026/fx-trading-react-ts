@@ -1,0 +1,17 @@
+.button__component {
+    font-family: var(--font-family);
+    font-size: var(--fs-small);
+    font-weight: 400;
+    padding: 0.50rem 1rem;
+    border-radius: 0.25rem;
+    background-color: #B4B4B4;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:disabled, &.__disabled {
+        opacity: 0.7;
+        border: 1px solid transparent;
+        pointer-events: auto! important;
+        cursor: not-allowed! important;
+    }
+}
