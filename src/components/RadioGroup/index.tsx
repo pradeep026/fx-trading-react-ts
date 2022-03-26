@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './style.scss';
 import { Radio } from './Radio';
+
+import './style.scss';
 
 export type RadioGroupProps = {
     /**
@@ -28,7 +29,7 @@ export type RadioGroupProps = {
 export const RadioGroup: React.FC<RadioGroupProps> = React.memo((props) => {
 
     return (
-        <div className='input__currency-component'>
+        <div className='radio__group-component'>
             {
                 props.options?.map((option, index: number) => {
                     return (

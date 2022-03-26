@@ -2,10 +2,11 @@
     display: flex;
 }
 
-.radio--component {
+.radio__component {
     display: flex;
     align-items: center;
     label {
+        font-size: var(--fs-small);
         padding: 0 0.25rem;
     }
     input[type='radio'] {

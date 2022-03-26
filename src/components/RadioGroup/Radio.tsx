@@ -23,7 +23,7 @@ type RadioProps =
 export const Radio: React.FC<RadioProps> = (props) => {
 
     return (
-        <div className={'radio--component'}>
+        <div className={'radio__component'}>
             <input
                 type={'radio'}
                 id={props.label}
