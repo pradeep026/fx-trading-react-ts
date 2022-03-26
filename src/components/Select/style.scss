@@ -1,0 +1,13 @@
+.select__component {
+    display: inline-flex;
+    flex-direction: column;
+    label {
+        font-size: var(--fs-small);
+        margin-bottom: 0.25rem;
+    }
+    select {
+        border: 1px solid var(--color-border);
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+    }
+}
