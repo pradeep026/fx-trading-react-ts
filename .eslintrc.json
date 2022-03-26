@@ -20,10 +20,14 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "object-curly-spacing": "0",
-        "spaced-comment": "0",
-        "react/display-name": "0",
-        "padded-blocks": "0",
-        "indent": "0"
+        "react/prop-types": 0,
+        "object-curly-spacing": 0,
+        "array-bracket-spacing": 0,
+        "spaced-comment": 0,
+        "react/display-name": 0,
+        "padded-blocks": 0,
+        "indent": 0,
+        "valid-jsdoc": 0,
+        "max-len": 0
     }
 }
