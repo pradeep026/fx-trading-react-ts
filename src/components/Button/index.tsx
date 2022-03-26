@@ -11,19 +11,18 @@ type Props =
         label: string;
     };
 
-export const Button: React.FC<Props> = (props) => {
-
-  return (
-    <button
-        data-testid
-        className={`button__component
-            ${props.disabled ? `button__disabled` : ``}`}
-        onClick={props.onClick}
-        disabled={props.disabled}>
-        {props.label}
-    </button>
-  );
-};
+export const Button: React.FC<Props> = React.memo((props) => {
+    return (
+        <button
+            data-testid
+            className={`button__component
+                ${props.disabled ? `button__disabled` : ``}`}
+            onClick={props.onClick}
+            disabled={props.disabled}>
+            {props.label}
+        </button>
+    );
+});
 
 Button.propTypes = {
     /**

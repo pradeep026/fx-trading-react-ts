@@ -2,7 +2,7 @@ import React from 'react';
 import type { RadioGroupProps } from './index';
 
 type RadioProps =
-  Pick<RadioGroupProps, 'name' | 'onChange'>
+  Pick<RadioGroupProps, 'name'>
   & {
     /**
      * Label for Radio component
@@ -12,7 +12,12 @@ type RadioProps =
      /**
       * Value of the Radio
       */
-     value: string;
+    value: string;
+
+    /**
+     * On change event callback function
+     */
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 
      /**
       * Default selected radio option
@@ -30,6 +35,7 @@ export const Radio: React.FC<RadioProps> = (props) => {
                 name={props.name}
                 value={props.value}
                 data-testid={props.label}
+                onChange={props.onChange}
                 defaultChecked={props?.defaultChecked} />
             <label htmlFor={props.label}>
                 {props.label}

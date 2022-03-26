@@ -28,6 +28,12 @@ export type RadioGroupProps = {
 
 export const RadioGroup: React.FC<RadioGroupProps> = React.memo((props) => {
 
+    const __onSelectRadioItem = (event: any) => {
+        if (typeof props?.onChange === `function`) {
+            props?.onChange(event.target?.value ?? ``);
+        }
+    };
+
     return (
         <div className='radio__group-component'>
             {
@@ -38,8 +44,8 @@ export const RadioGroup: React.FC<RadioGroupProps> = React.memo((props) => {
                             name={props.name}
                             label={option}
                             value={option}
-                            defaultChecked={props?.selectedValue === option}
-                            onChange={props?.onChange} />
+                            onChange={__onSelectRadioItem}
+                            defaultChecked={props?.selectedValue === option} />
                     );
                 })
             }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { RadioGroup } from './index';
 
 describe(`Tests CurrencyInput component`, () => {
@@ -10,18 +10,18 @@ describe(`Tests CurrencyInput component`, () => {
                 name={`test`}
                 options={[]}
                 selectedValue=''
-                onChange={() => {}} />
+                onChange={() => {}} />,
         );
     });
-    
+
     it(`Component renders input field with value`, () => {
-        const options = [`TestA`, `TestB`]
+        const options = [`TestA`, `TestB`];
         const { getByText, getByTestId } = render(
             <RadioGroup
                 name={`test`}
                 options={options}
                 selectedValue='TestA'
-                onChange={() => {}} />
+                onChange={() => {}} />,
         );
         options.forEach((option) => {
             // ensures radio button label
@@ -30,15 +30,15 @@ describe(`Tests CurrencyInput component`, () => {
             expect(getByTestId(option)).toBeInTheDocument();
         });
     });
-    
+
     it(`When radio selection is changed / selected`, () => {
-        const options = [`TestA`, `TestB`]
+        const options = [`TestA`, `TestB`];
         const { getByLabelText } = render(
             <RadioGroup
                 name={`test`}
                 options={options}
                 selectedValue='TestA'
-                onChange={(_) => { }} />
+                onChange={(_) => { }} />,
         );
         // Default `selectedValue` TestA radio component  is checked
         expect(getByLabelText(`TestA`)).toBeChecked();
@@ -48,4 +48,4 @@ describe(`Tests CurrencyInput component`, () => {
         // TestB radio component is should changed to checked
         expect(getByLabelText(`TestB`)).toBeChecked();
     });
-})
+});

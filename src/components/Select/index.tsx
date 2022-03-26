@@ -1,5 +1,6 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+
 import './style.scss';
 
 type SelectOption = {
@@ -33,12 +34,15 @@ type Props =
         label: string;
     };
 
-export const Select: React.FC<Props> = (props) => {
+export const Select: React.FC<Props> = React.memo((props) => {
 
     return (
         <div className='select__component'>
             <label>{props.label}</label>
-            <select data-testid={`select--component`}>
+            <select
+                data-testid={`select--component`}
+                defaultValue={props.defaultValue}
+                onChange={props?.onChange}>
               <option value="">{props.defaultOption}</option>
               {props.options?.map((option, index) => {
                   return (
@@ -50,4 +54,8 @@ export const Select: React.FC<Props> = (props) => {
             </select>
         </div>
     );
+});
+
+Select.propTypes = {
+    onChange: PropTypes.func,
 };
